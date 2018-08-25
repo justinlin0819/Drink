@@ -170,7 +170,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBAction func button_Checkresult(_ sender: Any) {
         //var order_result: [Results] = []
         //var order_count = 0
-        let urlStr = "https://sheetdb.io/api/v1/5b7a6df7ed06a"
+        /*let urlStr = "https://sheetdb.io/api/v1/5b7a6df7ed06a"
         if let url = URL(string: urlStr) {
             let task = URLSession.shared.dataTask(with: url) { (data, response , error) in
                 let decoder = JSONDecoder()
@@ -186,16 +186,15 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 }
             }
             task.resume()
-        }
+        }*/
         
         /*while order_result.count != 3 {
             
         }*/
         
-        /*if let controller = self.storyboard?.instantiateViewController(withIdentifier: "result") as? Result_ViewController {
-            controller.order = order_result
+        if let controller = self.storyboard?.instantiateViewController(withIdentifier: "result") as? Result_ViewController {
             self.present(controller, animated: true, completion: nil)
-        }*/
+        }
     }
     
 }
