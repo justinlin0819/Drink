@@ -12,8 +12,10 @@
 		5518306420AD4EF2003415E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5518306220AD4EF2003415E4 /* Main.storyboard */; };
 		5518306620AD4EF3003415E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5518306520AD4EF3003415E4 /* Assets.xcassets */; };
 		5518306920AD4EF3003415E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5518306720AD4EF3003415E4 /* LaunchScreen.storyboard */; };
-		5518307120AD4F59003415E4 /* 迷克夏.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5518307020AD4F59003415E4 /* 迷克夏.txt */; };
 		5518307320AD61AB003415E4 /* OrderData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5518307220AD61AB003415E4 /* OrderData.swift */; };
+		5F198A5221315EE600DB942F /* Result_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F198A5121315EE600DB942F /* Result_ViewController.swift */; };
+		5F198A5421315F1C00DB942F /* Result_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F198A5321315F1C00DB942F /* Result_TableViewCell.swift */; };
+		5F33E73E212FDB0F006FDF23 /* 丸作食茶.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5F33E73D212FDB0F006FDF23 /* 丸作食茶.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,8 +26,10 @@
 		5518306520AD4EF3003415E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5518306820AD4EF3003415E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5518306A20AD4EF3003415E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5518307020AD4F59003415E4 /* 迷克夏.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "迷克夏.txt"; sourceTree = "<group>"; };
 		5518307220AD61AB003415E4 /* OrderData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderData.swift; sourceTree = "<group>"; };
+		5F198A5121315EE600DB942F /* Result_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result_ViewController.swift; sourceTree = "<group>"; };
+		5F198A5321315F1C00DB942F /* Result_TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result_TableViewCell.swift; sourceTree = "<group>"; };
+		5F33E73D212FDB0F006FDF23 /* 丸作食茶.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "丸作食茶.txt"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,7 +48,7 @@
 			children = (
 				5518305D20AD4EF1003415E4 /* 訂飲料 */,
 				5518305C20AD4EF1003415E4 /* Products */,
-				5518307020AD4F59003415E4 /* 迷克夏.txt */,
+				5F33E73D212FDB0F006FDF23 /* 丸作食茶.txt */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +68,8 @@
 				5518306520AD4EF3003415E4 /* Assets.xcassets */,
 				5518306020AD4EF2003415E4 /* ViewController.swift */,
 				5518306220AD4EF2003415E4 /* Main.storyboard */,
+				5F198A5321315F1C00DB942F /* Result_TableViewCell.swift */,
+				5F198A5121315EE600DB942F /* Result_ViewController.swift */,
 				5518306720AD4EF3003415E4 /* LaunchScreen.storyboard */,
 				5518306A20AD4EF3003415E4 /* Info.plist */,
 			);
@@ -130,8 +136,8 @@
 			files = (
 				5518306920AD4EF3003415E4 /* LaunchScreen.storyboard in Resources */,
 				5518306620AD4EF3003415E4 /* Assets.xcassets in Resources */,
-				5518307120AD4F59003415E4 /* 迷克夏.txt in Resources */,
 				5518306420AD4EF2003415E4 /* Main.storyboard in Resources */,
+				5F33E73E212FDB0F006FDF23 /* 丸作食茶.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,7 +150,9 @@
 			files = (
 				5518306120AD4EF2003415E4 /* ViewController.swift in Sources */,
 				5518307320AD61AB003415E4 /* OrderData.swift in Sources */,
+				5F198A5421315F1C00DB942F /* Result_TableViewCell.swift in Sources */,
 				5518305F20AD4EF1003415E4 /* AppDelegate.swift in Sources */,
+				5F198A5221315EE600DB942F /* Result_ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

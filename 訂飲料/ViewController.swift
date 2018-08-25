@@ -17,6 +17,10 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet weak var ice: UISegmentedControl!
     @IBOutlet weak var senButton: UIButton!
     
+    @IBAction func button_SeeResult(_ sender: Any) {
+        
+    }
+    
     @IBAction func sentButtonPressed(_ sender: UIButton) {
         if nameTextField.text != "" && drinkTextField.text != "" {
             checkSugerAndIce()
@@ -123,7 +127,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
 
     // 讀取txt檔
     func getDrinkTxt(){
-        if let url = Bundle.main.url(forResource: "迷克夏", withExtension: "txt"), let content = try? String(contentsOf: url){
+        if let url = Bundle.main.url(forResource: "丸作食茶", withExtension: "txt"), let content = try? String(contentsOf: url){
             let listArray = content.components(separatedBy: "\n")
             for n in 0 ..< listArray.count{
                 if n % 2 == 0{
@@ -139,13 +143,13 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     // 將資料傳到後台
     func sendToServer(){
-        let url = URL(string: "https://sheetdb.io/api/v1/5afd9e786fe4c")
+        let url = URL(string: "https://sheetdb.io/api/v1/5b7a6df7ed06a")
         var urlRequest = URLRequest(url: url!)
         
         urlRequest.httpMethod = "POST"
         urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
-        let orderDictionary:[String: Any] = ["name": nameTextField.text!, "drink": drinkTextField.text!, "price": priceTextField.text!, "suger": choseSuger!, "ice" : choseIce!]
+        let orderDictionary:[String: Any] = ["name": nameTextField.text!, "drink": drinkTextField.text!, "price": priceTextField.text!, "sugar": choseSuger!, "ice" : choseIce!]
         let orderData: [String: Any] = ["data": orderDictionary]
         
         do {
@@ -162,5 +166,37 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         catch{
         }
     }
+    
+    @IBAction func button_Checkresult(_ sender: Any) {
+        //var order_result: [Results] = []
+        //var order_count = 0
+        let urlStr = "https://sheetdb.io/api/v1/5b7a6df7ed06a"
+        if let url = URL(string: urlStr) {
+            let task = URLSession.shared.dataTask(with: url) { (data, response , error) in
+                let decoder = JSONDecoder()
+                if let data = data, let order = try? decoder.decode([Results].self, from: data) {
+                    /*order_result = order
+                    order_count = order.count
+                    print(order.count)*/
+                    if let controller = self.storyboard?.instantiateViewController(withIdentifier: "result") as? Result_ViewController {
+                     controller.order = order
+                     self.present(controller, animated: true, completion: nil)
+                     }
+                    
+                }
+            }
+            task.resume()
+        }
+        
+        /*while order_result.count != 3 {
+            
+        }*/
+        
+        /*if let controller = self.storyboard?.instantiateViewController(withIdentifier: "result") as? Result_ViewController {
+            controller.order = order_result
+            self.present(controller, animated: true, completion: nil)
+        }*/
+    }
+    
 }
 

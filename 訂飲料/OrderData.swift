@@ -27,9 +27,12 @@ enum IceInfo: String{
     case got = "熱"
 }
 
-
-
-
-
+struct Results: Codable {
+    var name: String
+    var drink: String
+    var price: String
+    var sugar: String
+    var ice: String
+}
 
 
