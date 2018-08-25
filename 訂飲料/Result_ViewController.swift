@@ -10,6 +10,7 @@ import UIKit
 
 class Result_ViewController: UIViewController, UITableViewDataSource {
     
+    @IBOutlet weak var tableView_result: UITableView!
     var order: [Results] = []
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -23,7 +24,10 @@ class Result_ViewController: UIViewController, UITableViewDataSource {
         // Configure the cell...
         let order = self.order[indexPath.row]
         cell.label_name.text = order.name
-        
+        cell.label_drink.text = order.drink
+        cell.label_price.text = order.price
+        cell.label_sugar.text = order.sugar
+        cell.label_ice.text = order.ice
         
         return cell
     }
@@ -39,7 +43,7 @@ class Result_ViewController: UIViewController, UITableViewDataSource {
                 if let data = data, let order = try? decoder.decode([Results].self, from: data) {
                         self.order = order
                         DispatchQueue.main.async {
-                        self.tableView.reloadData()
+                    self.tableView_result.reloadData()
                         }
                     }
             }
@@ -48,6 +52,9 @@ class Result_ViewController: UIViewController, UITableViewDataSource {
     }
     
 
+    @IBAction func button_Back(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     /*
     // MARK: - Navigation
 

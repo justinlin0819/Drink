@@ -11,6 +11,11 @@ import UIKit
 class Result_TableViewCell: UITableViewCell {
 
     @IBOutlet weak var label_name: UILabel!
+    @IBOutlet weak var label_drink: UILabel!
+    @IBOutlet weak var label_price: UILabel!
+    @IBOutlet weak var label_sugar: UILabel!
+    @IBOutlet weak var label_ice: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
